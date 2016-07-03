@@ -1,4 +1,5 @@
 using Xunit; 
+using ConsoleApplication;  
 
 namespace ConsoleApp.Tests
 {
@@ -7,7 +8,10 @@ namespace ConsoleApp.Tests
         [Fact]
         public void Test()
         {
-            Assert.Equal(4, 2+2);
+            Program program = new Program();
+            var result = program.ReturnConstantValue();  
+
+            Assert.Equal(6, result);
         }
     }
 }
